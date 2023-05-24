@@ -3090,37 +3090,44 @@ mirror_thumb_tucky:
     orient: 0
     shift:
       - 0
-      - 0
-    rotate: 0
-    width: 1.25
-    height: 18
-    padding: 19
-    autobind: 10
-    skip: false
-    asym: both
-    colrow: mirror_default_default
-    name: mirror_thumb_tucky
-    row_net: P16
-    column_net: P14
-    mirror:
-      column_net: P14
-    zone:
-      key:
-        name: thumb_tucky
-        width: 1.25
-        row_net: P16
-        column_net: P21
-        mirror:
-          column_net: P14
-      name: thumb_tucky
-    col:
-      rows: {}
-      key: {}
-      name: default
-    row: default
-    bind:
-      - 0
-      - 0
-      - 0
-      - 0
-    mirrored: true
+points:
+  zones:
+    matrix:
+      anchor:
+        rotate: 5
+      columns:
+        pinky:
+        ring:
+          key.splay: -5
+          key.origin: [-12, -19]
+          key.stagger: 12
+        middle:
+          key.stagger: 5
+        index:
+          key.stagger: -6
+        inner:
+          key.stagger: -2
+      rows:
+        bottom:
+        home:
+        top:
+    thumbfan:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-7, -19]
+      columns:
+        near:
+        home:
+          key.spread: 21.25
+          key.splay: -28
+          key.origin: [-11.75, -9]
+        far:
+          key.spread: 21.25
+          key.splay: -28
+          key.origin: [-9.5, -9]
+      rows:
+        thumb:
+  rotate: -20
+  mirror:
+    ref: matrix_pinky_home
+    distance: 223.7529778
